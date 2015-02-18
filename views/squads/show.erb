@@ -15,19 +15,19 @@
       <% @squad.students.each do |student| %>
       <tr>
         <td>
-          <a href="/squads/<%= @squad.id %>/students/<%= student["id"]%>"><%=student["name"]%></a>
+          <a href="/squads/<%= @squad.id %>/students/<%= student["id"] %>"><%=student["name"] %></a>
         </td>
         <td>
-          <%= student["age"]%>
+          <%= student["age"] %>
         </td>
         <td>
-          <%= student["spirit_animal"]%>
+          <%= student["spirit_animal"] %>
         </td>
         <td>
-          <a href="/squads/<%= @squad.id %>/students/<%= student["id"]%>/edit">Edit</a>
+          <a href="/squads/<%= @squad.id %>/students/<%= student["id"] %>/edit">Edit</a>
         </td>
         <td>
-          <form action="/squads/<%= student["squad_id"]%>/students/<%= student["id"]%>" method="POST">
+          <form action="/squads/<%= student["squad_id"] %>/students/<%= student["id"] %>" method="POST">
             <input type="hidden" name="_method" value="delete">
             <input type="submit" class ="btn btn-xs btn-danger"value="X">
           </form>
